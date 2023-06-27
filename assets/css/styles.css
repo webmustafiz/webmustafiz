@@ -330,6 +330,7 @@ body.light-theme {
 
 .home__img {
   width: 160px;
+  z-index: 1;
 }
 
 /* card flow animated start */
@@ -337,8 +338,8 @@ body.light-theme {
 .home__handle {
   display: grid;
   align-items: center;
-
-
+  z-index: 1;
+  border-radius: 10px;
 
   justify-self: center;
   width: 190px;
@@ -364,7 +365,7 @@ body.light-theme {
   height: 600px;
   left: 75px;
   top: -100px;
-  background: linear-gradient(#00e5ff , #b400fb);
+  background: linear-gradient(#00e5ff , #b400fb, #FCAEAE);
   animation: animate 10s linear infinite;
 }
 @keyframes animate {
@@ -378,8 +379,13 @@ body.light-theme {
 
 .home__handle::after{
   content: '';
-  
+  position: absolute;
+  inset: 5px;
+  background: #29303f;
+  border-radius: 10px;
 }
+
+/* animated card finished */
 
 
 
