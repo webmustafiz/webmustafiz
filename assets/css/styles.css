@@ -1,7 +1,10 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
+
 :root {
   --header-height: 3.5rem;
 
@@ -18,7 +21,8 @@
   --lig: 75%;
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+  /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
@@ -82,7 +86,8 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: 0.4s; /* for light mode animation */
+  transition: 0.4s;
+  /* for light mode animation */
 }
 
 h1,
@@ -183,6 +188,7 @@ body.light-theme {
 .light-theme::-webkit-scrollbar {
   background-color: hsl(var(--second-hue), 8%, 80%);
 }
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
@@ -239,6 +245,42 @@ body.light-theme {
   align-items: center;
 }
 
+/* typing logo */
+/* .naVsection{
+  display: in;
+} */
+#typingLogo {
+  position: relative;
+  display: inline-block;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 5px;
+}
+
+#typingLogo::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(100, 105, 104);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: typing 2s linear infinite;
+}
+@keyframes typing {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/* typing logo fineshed */
 .nav__logo {
   position: relative;
   font-size: 2rem;
@@ -249,9 +291,10 @@ body.light-theme {
   /* color: var(--first-color); */
   transition: 0.2s;
 }
+
 /* nav text animation */
 
-.nav__logo::before{
+.nav__logo::before {
   content: '';
   position: absolute;
   top: 0;
@@ -259,16 +302,16 @@ body.light-theme {
   width: 100%;
   height: 100%;
   color: #01fe87;
-  -webkit-text-stroke: 0vw #383d52;
-  border-right:2px solid #01fe87 ;
   overflow: hidden;
   animation: animate 6s linear infinite;
 }
+
 @keyframes animate {
-  0%{
+  0% {
     width: 0;
   }
-  70%{
+
+  70% {
     width: 100%;
   }
 }
@@ -307,11 +350,9 @@ body.light-theme {
 
 /* Active link */
 .active-link {
-  background: linear-gradient(
-    180deg,
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
-  );
+  background: linear-gradient(180deg,
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
   box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
   border-radius: 5rem;
 
@@ -372,11 +413,9 @@ body.light-theme {
   justify-self: center;
   width: 190px;
   height: 200px;
-  background: linear-gradient(
-    180deg,
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
-    hsla(var(--first-hue), var(--sat), var(--lig), 0.1)
-  );
+  background: linear-gradient(180deg,
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.5),
+      hsla(var(--first-hue), var(--sat), var(--lig), 0.1));
 
   /* border-radius: 10rem 10rem 1rem 1rem; */
   display: flex;
@@ -386,26 +425,29 @@ body.light-theme {
   position: relative;
   overflow: hidden;
 }
-.home__handle::before{
+
+.home__handle::before {
   content: '';
   position: absolute;
   width: 150px;
   height: 600px;
   left: 75px;
   top: -100px;
-  background: linear-gradient(#00e5ff , #b400fb, #FCAEAE);
+  background: linear-gradient(#00e5ff, #b400fb, #FCAEAE);
   animation: animate 10s linear infinite;
 }
+
 @keyframes animate {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+
+  100% {
     transform: rotate(360deg);
   }
 }
 
-.home__handle::after{
+.home__handle::after {
   content: '';
   position: absolute;
   inset: 5px;
@@ -705,6 +747,7 @@ body.light-theme {
   color: var(--first-color);
   cursor: pointer;
 }
+
 /*Active modal*/
 
 .active-modal {
@@ -912,6 +955,7 @@ body.light-theme {
 .contact__form-area textarea {
   resize: none;
 }
+
 /*=============== FOOTER ===============*/
 .footer {
   background-color: var(--first-color);
@@ -1097,7 +1141,7 @@ body.light-theme {
   }
 
   .services__modal-description {
-    padding: 0 3.5rem;
+    padding: 0 0.1rem;
   }
 
   .work__container {
@@ -1129,6 +1173,7 @@ body.light-theme {
   .contact__form {
     width: 340px;
   }
+
   /* .contact__info {
     grid-template-columns: 350px;
     justify-content: center;
@@ -1182,6 +1227,7 @@ body.light-theme {
   .home__img {
     width: 290px;
   }
+
   .home__social-link {
     padding: 0.4rem;
     font-size: 1.25rem;
