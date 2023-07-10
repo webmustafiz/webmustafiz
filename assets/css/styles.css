@@ -261,12 +261,12 @@ body.light-theme {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: rgb(100, 105, 104);
+  /* background-color: rgb(100, 105, 104); */
   bottom: 0;
   left: 0;
-  transform: scaleX(0);
+  /* transform: scaleX(0); */
   transform-origin: left;
-  animation: typing 2s linear infinite;
+  /* animation: typing 2s linear infinite; */
 }
 @keyframes typing {
   0% {
@@ -283,7 +283,7 @@ body.light-theme {
 /* typing logo fineshed */
 .nav__logo {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #a395e9;
   letter-spacing: 2px;
   text-transform: lowercase;
