@@ -256,7 +256,7 @@ body.light-theme {
   letter-spacing: 5px;
 }
 
-#typingLogo::after{
+#typingLogo::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -268,13 +268,16 @@ body.light-theme {
   transform-origin: left;
   /* animation: typing 2s linear infinite; */
 }
+
 @keyframes typing {
   0% {
     transform: scaleX(0);
   }
+
   50% {
     transform: scaleX(1);
   }
+
   100% {
     transform: scaleX(0);
   }
@@ -1337,3 +1340,8 @@ body.light-theme {
     border-radius: 0.5rem;
   }
 }
+
+
+/* try */
+
+
