@@ -231,3 +231,23 @@ sr.reveal(`.footer, footer__container`, {
   origin: "bottom",
   distance: "30px",
 });
+
+
+
+
+// // image swap js
+// function swapImage() {
+//   // Get a reference to the image element
+//   var image = document.getElementById("imageToSwap");
+
+//   // Change the source of the image to the new image
+//   image.src = "hover.jpg";
+// }
+
+// // JavaScript function to restore the original image source on mouse out
+// function restoreImage() {
+//   // Get a reference to the image element
+//   var image = document.getElementById("imageToSwap");
+
+//   // Change the source of the image back to the original image
+//   // image.src = "original.jpg";
